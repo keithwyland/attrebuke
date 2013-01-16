@@ -1,3 +1,5 @@
+// JavaScript Document
+
 var attr_a = ['charset','coords','datasrc','datafld','methods','name','rev','shape','urn']; 
 var attr_area = ['nohref']; 
 var attr_body = ['alink','background','bgcolor','link','marginbottom','marginheight','marginleft','marginright','margintop','marginwidth','text','vlink']; 
@@ -45,3 +47,17 @@ function remove_attr(all, attrAr) {
 }
 
 remove_attr('a', attr_a); remove_attr('area', attr_area); remove_attr('body', attr_body); remove_attr('col', attr_col); remove_attr('embed', attr_embed); remove_attr('h1', attr_h1); remove_attr('h2', attr_h2); remove_attr('h3', attr_h3); remove_attr('h4', attr_h4); remove_attr('h5', attr_h5); remove_attr('h6', attr_h6); remove_attr('p', attr_p); remove_attr('div', attr_div); remove_attr('head', attr_head); remove_attr('hr', attr_hr); remove_attr('html', attr_html); remove_attr('iframe', attr_iframe); remove_attr('img', attr_img); remove_attr('input', attr_input); remove_attr('li', attr_li); remove_attr('link', attr_link); remove_attr('meta', attr_meta); remove_attr('object', attr_object); remove_attr('option', attr_option); remove_attr('param', attr_param); remove_attr('script', attr_script); remove_attr('table', attr_table); remove_attr('td', attr_td); remove_attr('th', attr_th); remove_attr('tr', attr_tr); remove_attr('tbody', attr_tbody); remove_attr('tfoot', attr_tfoot); remove_attr('thead', attr_thead);
+
+
+//View Source bookmarklet code from http://www.ravelrumba.com/blog/ipad-view-source-bookmarklet/
+(function(){
+    var w = window.open('about:blank'), 
+        s = w.document;
+    s.write('<!DOCTYPE html><html><head><title>Source of ' + location.href + '</title><meta name="viewport" content="width=device-width" /></head><body></body></html>');
+    s.close();
+ 
+    var pre = s.body.appendChild(s.createElement("pre"));
+    pre.style.overflow = 'auto';
+    pre.style.whiteSpace = 'pre-wrap';
+    pre.appendChild(s.createTextNode(document.documentElement.innerHTML));
+})();
