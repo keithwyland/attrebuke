@@ -1,0 +1,5 @@
+attrebuke
+
+Rebukes attributes that are obsolete in HTML5!
+
+Go [here](http://keithwyland.com/attrebuke) and drag the bookmarklet to your bookmark bar, go to a web page with obsolete attributes, click the bookmarklet and watch the offending attributes run away like the cowards they are!
